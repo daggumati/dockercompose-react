@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t daggumati/dockercompose-react -f Dockerfile.dev .
 script:
-  - docker run daggumati/dockercompose-react npm run test -- --coverage
+  - docker run -e CI=true daggumati/dockercompose-react npm run test
